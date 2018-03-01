@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mes emails</h1>
+
+
+  <% @emails.each do |email| %>
+    <ul>
+      <li>
+        <%= link_to email.object, email , :remote => true %>
+      </li>
+    </ul>
+  <% end %>  
+
+    <div id="current"></div>
+  
+  
+<!-- 
+<% @emails.each do |email| %>
+  <div>
+    <h3><%= email.object %></h3>
+    <p><%= email.body %></p>
+  </div>
+<% end %>  
+
+ -->
+
+
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Object</th>
+      <th>Body</th>
+      <th>Read</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @emails.each do |email| %>
+      <tr>
+        <td><%= email.object %></td>
+        <td><%= email.body %></td>
+        <td><%= email.read %></td>
+        <td><%= link_to 'Show', email %></td>
+        <td><%= link_to 'Edit', edit_email_path(email) %></td>
+        <td><%= link_to 'Destroy', email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table> -->
+
+
