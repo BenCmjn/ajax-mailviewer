@@ -7,11 +7,14 @@
     <ul>
       <li>
         <%= link_to email.object, email , :remote => true %>
+        <%= link_to 'Destroy', email, method: :delete, :remote => true, :class =>'delete_email',
+    data: { confirm: 'Are you sure?' } %>
       </li>
     </ul>
   <% end %>  
+    
+    <div id="current"> </div>
 
-    <div id="current"></div>
   
   
 <!-- 
